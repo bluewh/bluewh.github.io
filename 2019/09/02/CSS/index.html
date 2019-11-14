@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="CSS3学习笔记CSS3选择器回顾选择器：通配符选择器、元素选择器、类选择器、ID选择器、后代选择器
+新增基本选择器">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>PART2-CSS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS3学习笔记CSS3选择器回顾选择器：通配符选择器、元素选择器、类选择器、ID选择器、后代选择器 新增基本选择器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PART2-CSS">
+<meta property="og:url" content="http://yoursite.com/2019/09/02/CSS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CSS3学习笔记CSS3选择器回顾选择器：通配符选择器、元素选择器、类选择器、ID选择器、后代选择器 新增基本选择器">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-14T13:11:22.338Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PART2-CSS">
+<meta name="twitter:description" content="CSS3学习笔记CSS3选择器回顾选择器：通配符选择器、元素选择器、类选择器、ID选择器、后代选择器 新增基本选择器">
+  
+  
+    <link rel="icon" href="true">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/MUSIC">Music</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/PICTURE">Picture</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/ABOUT">About</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-CSS" class="post-CSS post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      PART2-CSS
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/09/02/CSS/" data-id="ck2yqnwhx0007torap3tzg22c" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="CSS3学习笔记"><a href="#CSS3学习笔记" class="headerlink" title="CSS3学习笔记"></a>CSS3学习笔记</h1><h2 id="CSS3选择器"><a href="#CSS3选择器" class="headerlink" title="CSS3选择器"></a>CSS3选择器</h2><p>回顾选择器：通配符选择器、元素选择器、类选择器、ID选择器、后代选择器<br><br></p>
+<h3 id="新增基本选择器"><a href="#新增基本选择器" class="headerlink" title="新增基本选择器"></a>新增基本选择器</h3><a id="more"></a>
+
+<p><strong>子元素选择器</strong><br>概念：子元素选择器只能选择某元素的子元素<br>语法格式：父元素 &gt; 子元素<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<p><strong>相邻兄弟选择器</strong><br>概念：相邻兄弟选择器可以选择紧接在另一个元素后的元素，他们有相同的父元素<br>语法格式：元素+兄弟相邻元素<br>兼容性：IE8+、FireFox、chrome、safari、opera<br>例子：section &gt; div + article  (选择的为div相邻的后面的article)</p>
+<p><strong>通用兄弟选择器</strong><br>概念：选择某元素后的所有兄弟元素，他们有相同的父元素<br>语法格式：元素~后面所有兄弟相邻元素<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<p><strong>群组选择器</strong><br>概念：将具有相同样式的元素分组在一起，用”,”隔开<br>语法格式：元素1，元素2<br>兼容性：IE6+、FireFox、chrome、safari、opera<br>例子：<br>section &gt; article,<br>section &gt; aside,<br>section &gt; div{<br>    相同的样式<br>}</p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p>对带有指定属性的HTML设置样式</p>
+<p><strong>Element [attribute]</strong><br>概念：为带有attribute属性的Element元素设置样式<br>兼容性：IE8+、FireFox、chrome、safari、opera<br>例子：a[href]{}</p>
+<p><strong>Element [attribute=”value”]</strong><br>概念：为attribute=value属性的Element元素设置样式<br>兼容性：IE8+、FireFox、chrome、safari、opera<br>例子：a[href=”#”]{}</p>
+<p><strong>Element [attribute~=”value”]</strong><br>概念：选择attribute属性包含单词value的Element元素设置样式<br>(有时class有多个值）<br>兼容性：IE8+、FireFox、chrome、safari、opera<br>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;one two&quot;&gt;</span><br><span class="line">&lt;a class=&quot;two three&quot;&gt;</span><br><span class="line">a[class=&quot;two&quot;]</span><br></pre></td></tr></table></figure>
+
+<p><strong>Element [attribute=^”value”]</strong><br>概念：设置attribute属性值以value开头的所有Element元素的样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<p><strong>Element [attribute=$”value”]</strong><br>概念：设置attribute属性值以value结尾的所有Element元素的样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<p><strong>Element [attribute=*”value”]</strong><br>概念：设置attribute属性值包含value字符串的所有Element元素的样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<p><strong>Element [attribute=|”value”]</strong><br>概念：设置attribute属性值以value或value-开头的所有Element元素的样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p><strong>动态伪类</strong><br>这些伪类并不存在于HTML中，只有交互时才体现<br>锚点伪类： :link(超链接 蓝色 下划线) :visited(访问过的链接)<br>用户行为伪类： :hover(鼠标经过) :active(活链接) :focus(光标出现如何显示)</p>
+<p><strong>UI元素状态伪类</strong></p>
+<p>把”:enabled”(可输入) “:disabled”(不可输入) “:checked”(选中的)<br>兼容性：IE9+、FireFox、chrome、safari、opera(checked只有opera兼容)<br>例子：<code>&lt;input type=&quot;text&quot; disabled=&quot;disabled&quot;&gt; input:disabled{}</code><br>input = input:enabled<br>先用input对输入框进行通用样式定义，再对:enabled :disenabled进行定义</p>
+<p><strong>CSS3结构类</strong><br>css3的:nth选择器</p>
+<p>选择方法</p>
+<ul>
+<li><p>Element:first-child<br>概念：选择属于其父元素的首个子元素的每个Element元素并为其设置样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:last-child<br>概念：指定属于其父元素的最后一个子元素的每个Element元素的样式<br>兼容性：IE8+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:nth-child(N)<br>概念：:nth-child(N)选择器匹配属于其父元素的第N个子元素，不论元素类型<br>兼容性：IE9+、FireFox4+、chrome、safari、opera<br>例：ul &gt; li:nth-child(3){}<br>【选择的元素与元素类型无关，只与位置有关，若取父元素的第二个子节点的div，第二个子节点不是div而是其他元素，则选择无效】<br>关于N：可以用数字，表示为第X个Element元素<br>可以用n.，n是简单的表达式，取值从0开始计算，不能用其他字母代替，n为全选，odd（奇数）=2n+1/-1，even（偶数）=2n<br>n*n不可用，css表达式不支持 *</p>
+</li>
+<li><p>Element:nth-last-child(N)<br>概念：:nth-last-child(N)选择器匹配属于其父元素的第N个子元素的每个元素，不论元素类型，从最后一个子元素开始计数（从1开始计数）<br>兼容性：IE9+、FireFox4+、chrome、safari、opera</p>
+</li>
+<li><p>Element:nth-of-type(N)<br>概念：:nth-of-type(N)选择器匹配属于其父元素的特定类型的第N个子元素的每个元素<br>兼容性：IE9+、FireFox4+、chrome、safari、opera</p>
+</li>
+<li><p>Element:nth-last-of-type<br>概念：:nth-of-type选择器匹配属于其父元素的特定类型的第N个子元素的每个元素，从最后一个子元素开始计数（从1开始计数）<br>兼容性：IE9+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:first-of-type<br>概念：:first-of-type选择器匹配属于其父元素的特定类型的首个子元素的每个元素<br>兼容性：IE9+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:last-of-type<br>概念：:last-of-type选择器匹配属于其父元素的特定类型的最后一个子元素的每个元素<br>兼容性：IE9+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:only-child<br>概念：:only-child选择器匹配属于其父元素的唯一子元素的每个元素（数量和类型都是唯一，不能有兄弟元素）<br>兼容性：IE9+、FireFox、chrome、safari、opera</p>
+</li>
+<li><p>Element:only-of-type<br>概念：:only-of-type选择器匹配属于其父元素的特定类型的唯一子元素的每个元素（只要指定的元素是唯一的元素类型就可以）<br>兼容性：IE9+、FireFox4+、chrome、safari、opera</p>
+</li>
+<li><p>Element:empty<br>概念：:empty选择器匹配没有子元素（包括文本节点）的每个元素<br>兼容性：IE9+、FireFox、chrome、safari、opera<br>例：<code>&lt;div&gt; &lt;/div&gt;(没有任何子元素及文本)</code></p>
+</li>
+</ul>
+<p><strong>否定选择器(:not)</strong><br>:not选择器匹配非指定元素/选择器的每个元素<br>语法格式：父元素:not（子元素/子选择器）<br>兼容性：IE9+、FireFox、chrome、safari、opera<br>例：nav &gt; a:not(:last-of-type)</p>
+<p><strong>CSS权重</strong></p>
+<ul>
+<li><p>权重等级与权值<br>行内样式(1000)&gt;ID选择器(100)&gt;类<br>属性选择器和伪类选择器(10)&gt;元素和伪类(1)&gt;*(0)</p>
+</li>
+<li><p>权重计算口诀<br>从0开始，一个行内元素+1000，一个id+100，一个属性选择器、class或者伪类+10，一个元素名或者伪元素+1</p>
+</li>
+</ul>
+<p>规则：</p>
+<blockquote>
+<p>1.包含更高权重选择器的一条规则拥有最高的权重<br>2.ID选择器(#idvalue)的权重比属性选择器([id=”idvalue”])高<br>3.带有上下文关系的选择器比单纯的元素选择器权重要高</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;&lt;article&gt;&lt;/article&gt;&lt;/section&gt;</span><br><span class="line">section &gt; article&#123;&#125;(权重=1+1) &gt; article&#123;&#125;(权重=1)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>4.与元素“挨得近”的规则生效：行内css直接写到元素里面，用style控制，权重最高<br>5.最后定义的规则会覆盖上面与之冲突的规则<br>6.无论多少个元素组成的选择器，都没有一个class选择器的权重高<br><code>div section article div权重 &lt; class=&quot;&quot;权重</code><br>7.通配符选择器权重为0，被继承的css属性也带有权重，权重也是0</p>
+</blockquote>
+<p><strong>伪元素</strong><br>css伪元素用于向某些选择器设置特殊效果<br>语法：元素(泛指一切选择器)::伪元素<br>兼容性：IE9+、FireFox、chrome、safari、opera</p>
+<ul>
+<li><p>::first-line<br>根据first-line伪元素中的样式对Element元素的第一行【文本】进行格式化<br>说明：只能用于块级元素：div、section、header（span为行级元素，不可用）</p>
+</li>
+<li><p>::first-letter<br>用于向文本首字母设置特殊样式 【说明：只能用于块级元素】</p>
+</li>
+<li><p>::before<br>在元素的内容前面插入新的内容【说明：常配合”content”使用】<br>特点：1.div的第一个子元素 2.行级元素 3.内容通过content写入 支持一切css属性 4.标签中找不到对应的标签</p>
+</li>
+<li><p>::after<br>在元素的内容后面插入新的内容【说明：多用于清除浮动，子元素浮动后父元素高度塌陷】<br><code>header::after{display:block; content:&quot;&quot;;clear:both;}</code></p>
+</li>
+<li><p>::section<br>用于设置在浏览器中选中文本后的前景色与背景色<br>兼容性说明：IE中只有IE9+版本支持，在FireFox中需加上前缀”-moz-“<br>div::section{background:red;color:#ff0;}元中的文字变为红底黄字，默认蓝底白字</p>
+<br>
+## CSS3边框与圆角
+
+</li>
+</ul>
+<h3 id="css3圆角"><a href="#css3圆角" class="headerlink" title="css3圆角"></a>css3圆角</h3><p><strong>border-radius属性</strong><br>一个最多可指定四个border-*-radius属性的复合属性，这个属性允许为元素添加圆角边框<br>语法格式：border-radius:1-4 length|% / 1-4 length|%<br>兼容性：IE9+、FireFox4+、chrome、safari5+、opera<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">border-radius:5px,5em,5rem,5vw(任何单位)</span><br><span class="line">border-radius:10%;百分比的长度是关于元素本身，长方形取50%会变成椭圆</span><br></pre></td></tr></table></figure>
+
+<p>多值：</p>
+<blockquote>
+<p>四个值：左上角 右上角 右下角 左下角<br>三个值：左上角 右上角和左下角 右下角<br>两个值：左上角右下角 右上角左下角</p>
+</blockquote>
+<p>border-top-left-radius左上 border-top-right-radius右上<br>border-bottom-left-radius左下 border-bottom-right-radius右下<br>说明：兼容前缀：[-webkit- chrome] [-moz- FireFox] [-ms- IE] [-o- opera]</p>
+<h3 id="css盒阴影"><a href="#css盒阴影" class="headerlink" title="css盒阴影"></a>css盒阴影</h3><p><strong>box-shadow属性</strong>：可以设置一个或多个下拉阴影的框<br>语法：box-shadow:h-shadow(水平方向偏移量) v-shadow(竖直方向偏移量) blur(模糊 不能为负) spread(扩展) color(颜色) inset(内阴影)<br>兼容性：IE9+、FireFox4+、chrome、safari5+、opera<br>例：<br><code>box-shadow：50px 30px 10px(模糊) 10px(扩展 上下左右扩展10px) insert</code><br>从左上角的位移水平竖直对应像素内阴影，模糊也在内部</p>
+<h3 id="css3边界图片"><a href="#css3边界图片" class="headerlink" title="css3边界图片"></a>css3边界图片</h3><p><strong>border-image属性</strong>：使用borde-image-*属性来构建可扩展按钮<br>语法：border-image:source slice width outset repeat<br>兼容：IE不兼容 opera不兼容 FireFox、chrome、safari6+</p>
+<ul>
+<li><p>border-image-source属性：<br>指定要使用的图像，而不是由border-style属性设置的边框样式<br>语法：border-image-source:none|url;</p>
+</li>
+<li><p>border-image-slice属性：<br>指定图像的边界向内偏移多少<br>语法：borde-image-slice：number|%|fill;<br>以div的百分比/长度来显示边框大小，越大则缩放越大<br>fill值：当图片在边角显示时会包含图片之间的空白部分而不是只有图片</p>
+</li>
+<li><p>border-image-width属性：<br>指定图像边界的宽度<br>语法：borde-image-width：number|%|auto；</p>
+</li>
+<li><p>border-image-outset属性：<br>指定在边框外部绘制border-image-area的量（向外扩张）<br>语法：borde-image-outset：number|length；</p>
+</li>
+<li><p>border-image-repeat属性：<br>用于图像边界是否应重复、拉伸、铺满<br>语法：borde-image-repeat：stretch(拉伸) repeat(重复) round(铺满) initial(默认=stretch) inherit(继承)；</p>
+</li>
+</ul>
+<h2 id="css3背景与渐变"><a href="#css3背景与渐变" class="headerlink" title="css3背景与渐变"></a>css3背景与渐变</h2><h4 id="css3背景图像区域"><a href="#css3背景图像区域" class="headerlink" title="css3背景图像区域"></a>css3背景图像区域</h4><p><strong>background-clip属性</strong>：指定背景绘制区域<br>语法：background-clip：border-box(边框盒子)|padding-box(内边距盒子)|content-box(内容盒子)<br>兼容：IE9+、FireFox、chrome、safari、opera<br>要设置border和padding，背景被剪裁到border盒子padding盒子content盒子</p>
+<h4 id="css3背景图像定位"><a href="#css3背景图像定位" class="headerlink" title="css3背景图像定位"></a>css3背景图像定位</h4><p><strong>background-origin属性</strong>：指定background-position属性应该是相对位置<br>语法：background-origin：border-box(边框盒子)|padding-box(内边距盒子)|content-box(内容盒子)<br>兼容：IE9+、FireFox4+、chrome、safari5+、opera<br>背景图片相对于border盒子padding盒子content盒子的左上角来定位（偏移量）<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background:url() no-repeat 50px 100px;</span><br><span class="line">background-origin:border-box;</span><br></pre></td></tr></table></figure>
+
+<h4 id="css3背景图像大小"><a href="#css3背景图像大小" class="headerlink" title="css3背景图像大小"></a>css3背景图像大小</h4><p><strong>background-size属性</strong>：指定背景图片大小<br>语法：background-size：length|percentage|cover|contain<br>兼容：IE9+、FireFox4+、chrome、safari5+、opera<br>例：<code>background-size:100% auto; 100% 100%; 50%;</code><br>当只设置一个值时，根据宽度等比缩放；当设置两个值时，按设定值显示。<br>cover：将图片等比缩放以填满整个容器，不留白。<br>contain：将图片等比缩放至某一边满足容器边缘。</p>
+<h4 id="css3多重背景图片"><a href="#css3多重背景图片" class="headerlink" title="css3多重背景图片"></a>css3多重背景图片</h4><p>允许使用多个背景图片<br>语法：background-image:url(),url()…;(前面的图会依次覆盖后面的图)<br>兼容：IE9+、FireFox、chrome、safari、opera<br>要设置border和padding，背景被剪裁到border盒子padding盒子content盒子</p>
+<h4 id="css3背景属性整合"><a href="#css3背景属性整合" class="headerlink" title="css3背景属性整合"></a>css3背景属性整合</h4><p>可以在一个声明中设置所有背景属性<br>background:color position size repeat origin(定位) clip(区域) attachment(状态：滚动/不变fixed) image<br>例：【最佳格式】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background:#abc url() no-repeat center center;</span><br><span class="line">background-size:50%;</span><br><span class="line">background-origin:content-box;</span><br><span class="line">background-clip:content-box;</span><br><span class="line">background-attachment:fixed;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css3渐变"><a href="#css3渐变" class="headerlink" title="css3渐变"></a>css3渐变</h3><p>兼容：<br>IE10+ | Chrome26+|FireFox10+|safari6.1+|opera12.1+</p>
+<ul>
+<li>| :-: | :-: | :-: | -:</li>
+<li>|10.0 -webkit-|3.6 -moz-|5.1 -webkit-|11.6 -o-</li>
+</ul>
+<p><strong>线性渐变</strong><br>沿着一根轴线改变颜色，从起点到终点，颜色顺序渐变(默认从上到下)<br>语法：background：linear-gradient(direction方向,color-stop1,color-stop2…(多个渐变色))<br>例:【4种兼容】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    width: ;</span><br><span class="line">    height: ;</span><br><span class="line">    background: -webkit- linear-gradient(red,blue);</span><br><span class="line">    background:    -moz- linear-gradient(red,blue);</span><br><span class="line">    background:      -o- linear-gradient(red,blue);</span><br><span class="line">    background:          linear-gradient(red,blue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>渐变【从左到右】：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">background: -webkit- linear-gradient(begin-direction,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:    -moz- linear-gradient(end-direction,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:      -o- linear-gradient(end-direction,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:          linear-gradient(to end-direction,color-stop1,color-stop2…(多个渐变色));</span><br></pre></td></tr></table></figure>
+
+<p>【从左到右】例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">background: -webkit- linear-gradient(left,red,blue);</span><br><span class="line">background:    -moz- linear-gradient(right,red,blue);</span><br><span class="line">background:      -o- linear-gradient(right,red,blue);</span><br><span class="line">background:          linear-gradient(to right,red,blue);</span><br></pre></td></tr></table></figure>
+
+<p>浏览器为webkit内核写开始方向，moz和o内核写结束方向</p>
+<p><strong>对角渐变</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">background: -webkit- linear-gradient(begin-level begin-vertical,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:    -moz- linear-gradient(end-level end-vertical,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:      -o- linear-gradient(end-level end-vertical,color-stop1,color-stop2…(多个渐变色));</span><br><span class="line">background:          linear-gradient(to end-level end-vertical,color-stop1,color-stop2…(多个渐变色));</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">background: -webkit- linear-gradient(       left top,red,blue);</span><br><span class="line">background:    -moz- linear-gradient(   right bottom,red,blue);</span><br><span class="line">background:      -o- linear-gradient(   right bottom,red,blue);</span><br><span class="line">background:          linear-gradient(to right bottom,red,blue);</span><br></pre></td></tr></table></figure>
+
+<p>使用角度：<code>background:linear-gradient(angle(角度),color-stop1,color-stop2…(多个渐变色));</code><br>例：<code>background:linear-gradient(45deg,red,yellow,blue);</code></p>
+<p>颜色结点多，多个颜色控制，默认等分<br>规定颜色过渡：(90deg,red 10%,orange 15%,yellow 20%,…,violet 100%)<br>若渐变色没有填充100%，则最后的颜色会将剩下的部分以纯色形式填充，没有渐变。</p>
+<p>透明渐变：(90deg,rgba(255,0,0,0(透明度)))(90deg,rgba(255,0,0,0.5(透明度)))(调整渐变过渡)(90deg,rgba(255,0,0,1(透明度)))</p>
+<p>重复渐变：background:repeating-linear-gradient(color|length|percentage)<br><code>background:repeating-linear-gradient(90deg,red 0% blue 20%(100%均分))</code></p>
+<p><strong>css3径向渐变</strong>：从起点到终点颜色从内到外进行圆形渐变<br>background:radius-gradient(center,shape,size,start-color…last-color(多个渐变色))默认颜色结点均匀分布</p>
+<ul>
+<li><p>颜色结点不均匀分布<br><code>background：radius-gradient(red 50%,blue 70%);</code><br>0-50%为红色纯色 70%-100%为蓝色纯色，百分比范围外的颜色为纯色，百分比长度是从圆心到角的距离</p>
+</li>
+<li><p>设置形状<br><code>background：radius-gradient(shape,color-stop1，color-stop2…);</code><br>形状：circle-圆 ellipse-椭圆 如果元素宽高值一样，则两种都显示为圆形</p>
+</li>
+<li><p>尺寸大小关键字<br><code>background：radius-gradient(size,color-stop1，color-stop2…);</code><br>size与shape为同一参数，不能用，隔开<br>closest-side：最近边 farthest-side：最远边<br>closest-corner：最近角 farthest-corner：最远角<br>从圆心到选择的关键字会产生渐变，其他部分自适应</p>
+</li>
+<li><p>控制圆心位置<br><code>background：radius-gradient(30% 70%,closest-corner circle,red,blue);</code><br>椭圆分为长轴和短轴，选择角时最近角为短轴，长轴为到第二近的角</p>
+</li>
+</ul>
+<p><strong>重复渐变</strong><br><code>background:repeating-radial-gradient(color1 length|percentage,color1 length|percentage…)</code></p>
+<p><strong>IE渐变</strong>(颜色十六进制，IE10以下)<br><code>filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;startColor&#39;,endColorstr=&#39;endColor&#39;,GradientType=0/1/2);</code><br>gradienttype的值：0为上下，1为左右，2结束颜色到黑色</p>
+<h2 id="CSS3转换"><a href="#CSS3转换" class="headerlink" title="CSS3转换"></a>CSS3转换</h2><p><strong>css3 transform属性</strong><br>让元素在一个坐标系统中变形，这个属性包含一系列变形函数，可以移动、旋转和缩放元素<br>语法：<code>transform:none(默认)|&lt;transform-function&gt;(可以有多个)</code><br>兼容：IE12+,FireFox16+,Chrome36+,safari16+,opera23+</p>
+<h3 id="CSS3-2D转换"><a href="#CSS3-2D转换" class="headerlink" title="CSS3 2D转换"></a>CSS3 2D转换</h3><p><strong>旋转rotate</strong>：通过指定的角度参数对原元素指定一个2D旋转<br>语法:<code>transform:retate(&lt;angle&gt;));</code><br>angle是指旋转的角度，正数顺时针，负数逆时针<br>例：[兼容]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:rotate(7deg);</span><br><span class="line">   -moz-transform:rotate(7deg);</span><br><span class="line">     -o-transform:rotate(7deg);</span><br><span class="line">        transform:rotate(7deg);</span><br></pre></td></tr></table></figure>
+
+<p><strong>移动translate</strong>：translate()方法根据左(x轴)，顶部(Y轴)位置给定的参数从当前元素位置移动</p>
+<blockquote>
+<p>translateX(x)仅水平方向移动<br>translateY(y)仅垂直方向移动<br>translate(x，y)水平和垂直方向同时移动</p>
+</blockquote>
+<p>语法:<code>transform:translateX(200px/em/vw/vh/rem/%)|translateY(100px)|translate(200px,100px);</code><br>没有第二个值则默认0，第一个值不能不写，要用0代替</p>
+<p><strong>缩放scale</strong>：translate()方法根据左(x轴)，顶部(Y轴)位置给定的参数从当前元素位置移动</p>
+<blockquote>
+<p>scaleX(x)仅水平方向缩放<br>scaleY(y)仅垂直方向缩放<br>scale(x，y)水平和垂直方向同时缩放</p>
+</blockquote>
+<p>语法:<code>transform:scaleX(.5)|scaleY(.3)|scale(.5,.3);</code><br>x.y的缩放原点线始终在中线，若不写第二个值默认与第一个值相同，只有一个值会等比缩放 </p>
+<p><strong>扭曲skew</strong>：斜切变化</p>
+<blockquote>
+<p>skewX(x)仅水平方向扭曲变形<br>skewY(y)仅垂直方向扭曲变形<br>skew(x，y)水平和垂直方向同时扭曲变形</p>
+</blockquote>
+<p>语法：<code>transform:skewX(15deg)|skewY(15deg)|skew(15deg,15deg)</code></p>
+<p>倾斜角度：<br>Y：正值顺时针，负值逆时针(90deg消失)<br>X：正值逆时针，负值顺时针<br>只有一个参数第二个默认0</p>
+<p><strong>矩阵matrix</strong>：以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵<br>语法：<code>transform：matrix(a,c,b,d,tx,ty);</code><br>tx,ty就是基于x,y坐标重新定位元素</p>
+<h3 id="CSS3-3D转换"><a href="#CSS3-3D转换" class="headerlink" title="CSS3 3D转换"></a>CSS3 3D转换</h3><p><strong>旋转rotate</strong></p>
+<ul>
+<li>旋转rotateX/Y：指定对象在X/Y轴上的旋转角度<br><code>transform:rotateX/Y(&lt;angle&gt;);</code></li>
+</ul>
+<p>css3 3D旋转</p>
+<ul>
+<li>旋转rotateZ：指定对象在Z轴上的旋转角度,图片围绕Z轴旋转<br><code>transform:rotateZ(&lt;angle&gt;);</code></li>
+<li>旋转rotate3d：指定对象3D旋转角度<br><code>tansform:rotate3d(x,y,z,angle)</code><br>x,y,z表示旋转方向 angle表示旋转角度，参数不能省略<br>当只有一个参数时，旋转方向只有0和非0的区别，当有多个方向改变时，用小数点区分在该方向上的变换程度，最大为1，<br>例：<code>transform:rotate3d(1,1,1,4deg)则.1为4.5deg，参数只支持到.01</code></li>
+</ul>
+<p><strong>移动translate</strong></p>
+<ul>
+<li>移动translateZ：指定对象在Z轴上平移<br><code>transform:translateZ(200px);</code><br>参数对应z轴，不许省略，用于遮罩</li>
+<li>旋转translate3d：指定对象3D平移<br><code>tansform:translate3d(x,y,z)</code>不能省略</li>
+</ul>
+<p><strong>缩放scale</strong></p>
+<ul>
+<li>移动scaleZ：指定对象在Z轴上缩放<br><code>transform:scaleZ(.5);</code><br>参数对应z轴，不许省略，用于遮罩</li>
+<li>旋转scale3d：指定对象3D缩放<br><code>tansform:scale3d(x,y,z)</code>三个参数缺一不可</li>
+</ul>
+<p><strong>矩阵matrix3d</strong>：以一个4*4矩阵的形式指定一个3D变换<br>语法：<code>transform:mateix3d(sx,n,n,n,n,sy,n,n,n,n,sz,n,n,n,n);</code><br>旋转+移动+缩放=矩阵</p>
+<p><strong>css3 Trsnsform与坐标系统</strong><br>transform-origin属性:允许更改转换元素的位置<br><code>transform-origin:x-axis,y-axis,z-axis;(坐标)</code><br>transform-origin：25% top;</p>
+<p><strong>css3中的矩阵</strong>：指一个方法 书写为matrix()和matrix3d()<br>matrix是元素，2D平面的移动变换，2D变换矩阵为3<em>3<br>matrix3d是元素3D的移动变换 3D变换矩阵为4</em>4</p>
+<ul>
+<li>matrix矩阵位移：<code>transform：matrix(a,c,b,d,tx,ty);</code></li>
+</ul>
+<p>目标矩阵说明：ax+cy+e为变换后的水平坐标，bx+by+f表示变换后垂直坐标元素中心点改变<br>转换公式：x,y表示转换元素的所有坐标，xy为transform-origin中的值<br><code>transform:matrix(1,0,0,1,x,y);=transform:translate(x,y);</code><br>matrix在FireFox浏览器下需要添加单位，webkit内核默认px，translate等方法需要加单位</p>
+<ul>
+<li><p>矩阵matrix缩放(scale)<br><code>matrix(sx,0,0,sy,0,0)=scale(sx水平缩放,sy垂直缩放)</code></p>
+</li>
+<li><p>矩阵matrix旋转(rotate)<br><code>matrix(cos,sin,-sin,cos,0,0)=rotate(deg);</code>cos和sin不能写角度，要计算数值<br><code>transform：matrix(.7071,.7071,-0.7071,.7071,0,0);=translate:rotate(45deg)</code></p>
+</li>
+<li><p>矩阵matrix拉伸(skew)<br><code>matrix(1,tany,tanx,1,0,0)=skew(xdeg,ydeg);</code><br><code>matrix(1,1,1,1,0,0)=skew(45deg,45deg)</code></p>
+</li>
+<li><p>矩阵matrix镜像对称效果<br><code>matrix(1-k*k)/(1+k*k),2k/(1+k*k),(k*k-1)/(1+k*k),0,0)</code><br>k为对称轴y=kx的斜率 对称轴一定通过元素变换的中心点<br><code>transform:matrix(-0.6,.8,.8,.6,0,0);</code></p>
+</li>
+</ul>
+<p>3D变换中的矩阵<br>transform:matrix3d(sx,0,0,0,0,sy,0,0,0,0,sz,0,0,0,0,1);</p>
+<h3 id="CSS扩展属性"><a href="#CSS扩展属性" class="headerlink" title="CSS扩展属性"></a>CSS扩展属性</h3><p>transform-style属性:指定嵌套元素是怎样在三维空间中呈现<br>语法:<code>transform-style:flat(默认值)|preserve-3d(开启3d，可以旋转被盖住)</code></p>
+<p><strong>perspective属性</strong><br>指定观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果<br><code>perspective:number(px)|none(默认);</code>会离视线越来越近</p>
+<ul>
+<li><p>perspective-origin属性：指定透视点位置<br><code>perspective-origin：x-axis y-axis; 默认perspective-origin:50% 50%;</code><br>perspective-origin：bottom|center|inherit|initial|left|right|top|px;</p>
+</li>
+<li><p>backface-visibility属性：指定元素背面面向用户时是否可见<br><code>backface-visibility:visible(默认值)|hidden;</code></p>
+</li>
+</ul>
+<h2 id="CSS3过渡"><a href="#CSS3过渡" class="headerlink" title="CSS3过渡"></a>CSS3过渡</h2><p>-允许css的属性值在一定的时间区间内平滑的过渡<br>-鼠标单击获得焦点 被点击或对元素任何改变中触发，并圆滑的以动画效果改变css属性值<br>兼容：IE10+，FireFox16+，Chrome26+，safari6.1+，opera12.1+</p>
+<p><strong>transform-property属性</strong>：检索或设置对象中的参与过渡的属性<br><code>transform-property:none|all(默认)|property(写元素属性名【例：transform-property:color;】)</code><br>例：[兼容]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    transform:rotate(0deg);</span><br><span class="line">    -webkit-transform-property:transform(名称);</span><br><span class="line">       -moz-transform-property:transform;</span><br><span class="line">        -ms-transform-property:transform;</span><br><span class="line">         -o-transform-property:transform;</span><br><span class="line">            transform-property:transform;</span><br><span class="line">&#125;</span><br><span class="line">div:hover&#123;</span><br><span class="line">    translate:rotate(180deg);</span><br><span class="line">     -webkit-transform-property:transform(名称);</span><br><span class="line">       -moz-transform-property:transform;</span><br><span class="line">        -ms-transform-property:transform;</span><br><span class="line">         -o-transform-property:transform;</span><br><span class="line">            transform-property:transform;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><small>[显示为:鼠标经过时图片会进行180°旋转]</small><br>如果不写transition-property属性表示all所有属性支持过渡</p>
+<p><strong>transition-daration属性</strong>：检索或设置对象过渡的持续的时间<br>语法：transition-daration：time;<br>参数说明：规定完成过渡效果需要花费的时间(s/ms)，默认是0</p>
+<p><strong>transition-timing-function属性</strong>：检索或设置对象中过渡动画的模型<br>语法：transition-timing-function： ；<br>参数说明：</p>
+<blockquote>
+<p>-linear：线性过渡(匀速运动) / -ease(默认)：平滑过渡(由慢到快，后变快幅度减慢) / -ease-in：由慢到快 / -ease-out：又快到慢 / -ease-in-out：慢快慢 / -step-start / -step-end / steps：接受两个参数的步进函数</p>
+</blockquote>
+<p>第一个参数：必须为正整数指定函数<br>第二个函数：取值可是start.end,指定每一步的值发生变化的时间点 可选 默认end</p>
+<p><strong>transition-delay属性</strong>：检索或设置对象延迟过渡的时间<br>语法：<code>transition-delay:time(s/ms);</code>默认0</p>
+<p><strong>transition复合属性</strong><br><code>transition:property duration timing-function delay</code></p>
+<h2 id="CSS动画"><a href="#CSS动画" class="headerlink" title="CSS动画"></a>CSS动画</h2><p>是元素从一种样式逐渐变化为另一种样式的效果<br>兼容：IE10+,FireFox16+,Chrome43+,Safari9+,Opera30+,Android(-webkit-)<br>手机设备的浏览器在使用css3动画时，要加上webkit前缀</p>
+<h3 id="CSS3-animation"><a href="#CSS3-animation" class="headerlink" title="CSS3 animation"></a>CSS3 animation</h3><p><strong>animation-name属性</strong>：检索或设置对象所应用的动画名称<br><code>animation-name:keyframename(指定要绑定到选择器的关键帧名称)|none(指有没有动画，可用于覆盖从级联的动画)</code></p>
+<p><strong>animation-duration属性</strong>：检索或设置对象动画的持续时间<br><code>animation-duration:time;默认为0，意味着没有动画效果</code></p>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">div &gt; .inner&#123;</span><br><span class="line">    background-image:url();</span><br><span class="line">    -webkit-animation-name:circle_inner;</span><br><span class="line">            animation-name:circle_inner;</span><br><span class="line">    -webkit-animation-duration:10s;</span><br><span class="line">            animation-duration:10s;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes circle_inner&#123;</span><br><span class="line">    from&#123;transform:rotateX(0deg);&#125;</span><br><span class="line">    to&#123;transform:rotateX(360deg);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>animation-timing-function属性</strong>：检索或设置对象动画的过渡类型</p>
+<blockquote>
+<p>-linear：线性过渡(匀速运动) / -ease(默认)：平滑过渡(由慢到快，后变快幅度减慢) / -ease-in：由慢到快 / -ease-out：又快到慢 / -ease-in-out：慢快慢 / -step-start / -step-end / steps：接受两个参数的步进函数</p>
+</blockquote>
+<p><strong>animation-delay属性</strong>：检索或设置对象动画的延迟时间<br>语法：<code>animation-delay：time;</code><br>参数说明：可选，定义动画开始之前等待的时间，s/ms，默认为0<br>1s=1000ms 500ms=0.5s写成.5s</p>
+<p><strong>animation-iteration-counter属性</strong>：检索或设置对象动画的循环次数<br>语法：<code>animation-iteration-counter:infinite|number默认1;</code><br>开启循环后，只有动画刚开始时delay起作用，循环后delay不起作用</p>
+<p><strong>animation-direction属性</strong>：检索或设置对象动画在循环中是否反向运动<br>语法：<code>animation-direction:normal(正常方向)|reverse(反方向)</code><br>alternate：动画先正常运行再反方向运行，并持续交替运行(一定要设置循环)<br>alternate-reverse：动画先反运行再正常方向运行，并持续交替运行(一定要设置循环)<br>若不设置循环(animation-iteration-counter),则只正常运行/反方向运行一次就停止</p>
+<p><strong>animation-fill-mode属性</strong>：规定当动画不播放时(当动画完成或当动画有延迟未开始播放时),要应用到元素的样式<br>语法：<code>animation-fill-mode:none(默认,不设置动画对象之外的状态)|forvards(设置对象状态为动画结束时的状态)|backwards(设置对象状态为动画开始时的状态)|both(设置对象状态为动画开始或结束时的状态)</code><br>例：正常动画在360deg时结束，更改为transform:rotateX(315deg)后，动画会在315deg时停止</p>
+<p><strong>animation-play-state属性</strong>：指定动画是否正在运行或已暂停动画状态<br><code>animation-play-state:paused(暂停)|running(默认值，正在运行)</code><br>例：<code>div:hover &gt; div{animation-play-state:running}</code>鼠标放上时运行</p>
+<p>transition需要触发事件(有鼠标参与)，animation无需触发事件</p>
+<p><strong>animation复合属性</strong><br><code>animation:name duration timing-function delay iteration-count direction fill-mode play-state;</code><br>name duration必须有，且位置固定，自动识别其他顺序不固定</p>
+<p><strong>CSS3 @keyframes</strong><br>keyframes定义：关键帧，可以指定任何顺序排列来决定animation动画变化的关键位置<br>使用说明：使用@keyframes规则创建动画通过逐步改变，从一个css样式设定到另一个在动画过程中可以通过@keyframes规则多次更改css样式的设定<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@keyframes animationname&#123;</span><br><span class="line">    keyframes-selector&#123;css-style&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>animationname必写 定义animation名称<br>keyframes-selector必写 动画持续时间的百分比from(0%)to(100%)<br>css-style必写 一个或多个合法的css样式属性<br>animation-name:animation;<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@-webkit-keyframes circle-inner&#123;</span><br><span class="line">    0%&#123;transform:rotateX(0deg);&#125;</span><br><span class="line">    25%&#123;transform:rotateX(45deg);&#125;</span><br><span class="line">    75%&#123;transform:rotateX(315deg);&#125;</span><br><span class="line">    100%&#123;transform:rotateX(360deg);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>0%可以用from代替，100%可用to代替</p>
+<p>优化流畅显示</p>
+<ol>
+<li>position-fixed代替background-attachment</li>
+<li>带图片的元素放在伪元素中</li>
+<li>will-change </li>
+</ol>
+<p><strong>css3 will-change</strong>：增强页面渲染技能<br>CPU中央处理器 GPU图形处理器<br>硬件加速 在计算机中把计算量非常大的工作分配给专门的硬件来处理，减轻CPU功能工作量</p>
+<p><strong>translateZ() / transform3d() Hack</strong>：为元素添加没有变化的3D变形，骗取浏览器触发硬件加速<br>浏览器创建layer层并触发GPU，GPU处理完成到layer层<br>代价：通过向他自己的层叠加元素，占用RAM和GPU存储空间</p>
+<p>will-change：提前通知浏览器元素将要做什么动画，让浏览器提前准备合适的优化设置<br>语法：will-change：auto(无特定意图，适用通常所做的任何启发和优化)|scroll-position(表示将要改变元素的滚动位置)|contents(表示将要改变元素内容)custom-ident(明确指定将要改变的属性与给定的名称)|animateable-feature(动画的一些特征值，如left、top、margin等)<br>兼容:IE13+,FireFox47+,Chrome49+,safari9+,opera39+,ios9.3+,Android52+<br>custom-ident会给动画一个虚拟层，渲染到虚拟层，减少性能<br>animation-feature会改变css，浏览器会不断渲染，增加性能，不建议使用<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &gt; div&#123;</span><br><span class="line">    -webkit-will-change:transform(要变化的属性);</span><br><span class="line">       -moz-will-change:transform(要变化的属性);</span><br><span class="line">         -o-will-change:transform(要变化的属性);</span><br><span class="line">            will-change:transform(要变化的属性);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>网页刚加载就会提醒，触发才起作用</p>
+<p>使用注意：</p>
+<ol>
+<li>勿滥用(每加载一个元素浏览器都发注意给浏览器，浏览器罢工)</li>
+<li>提前申明(先写will-change再写改变的元素)</li>
+<li>remove(浏览器会一直保持着这个请求，让GPU留意，但实际已经不用了)</li>
+<li>要放在父级元素上</li>
+</ol>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/09/02/CSS/">
+    <time datetime="2019-09-02T12:38:45.000Z" class="entry-date">
+        2019-09-02
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/11/14/javascript/" rel="prev"><span class="meta-nav">←</span> PART3-javascript</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/08/30/HTML/" rel="next">PART1-HTML <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=370 height=86 src="//music.163.com/outchain/player?type=2&id=26620638&auto=1&height=66"></iframe>      
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/14/javascript/">PART3-javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/CSS/">PART2-CSS</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/HTML/">PART1-HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
